@@ -1,0 +1,18 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0 auto;
+}
+
+.section2 .section2-slider .slick-dots {
+  bottom: 10px;
+}
+
+.section2 .section2-slider .slick-dots li button:before {
+  font-size: 15px;
+}
+
+.section2 .section2-slider .slick-dots li.slick-active button:before {
+}
