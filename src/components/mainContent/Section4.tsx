@@ -61,14 +61,14 @@ const Section4 = () => {
 
   return (
     <section>
-      <div className="bg-section4Bg bg-no-repeat bg-right-top bg-cover md:w-full min-h-screen">
+      <div className="bg-section4Bg bg-no-repeat bg-right-top bg-cover md:w-full min-h-screen md:h-screen">
         <div className="bg-section4CharBg bg-no-repeat bg-center bg-cover bg-fixed md:w-full h-full">
           <div className="md:max-w-[1140px] h-full relative flex flex-col justify-center text-white">
             <div
               className={`bg-[#1B1B1BCC] text-[40px] leading-[48px] font-bold p-[10px] border-l-[3px] border-[#6ec1e4] mr-[10px] my-[10px] transition-all duration-1000 ${
                 titleInView
-                  ? "md:translate-x-0 md:opacity-100"
-                  : "md:translate-x-[300px] md:opacity-0"
+                  ? "md:translate-x-0 opacity-100"
+                  : "md:translate-x-[300px] opacity-0"
               }`}
               ref={titleRef}
             >

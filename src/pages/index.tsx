@@ -27,14 +27,16 @@ export default function Home() {
 
   return (
     <main className="text-[15px] h-screen leading-7 font-display">
-      {/* <div
+      <div
         className={`fixed transition-all duration-500 hover:-translate-y-2 w-10 h-10 bg-white rounded-full right-[15px] bottom-5 text-center cursor-pointer my-auto leading-[44px] z-[1000] ${
-          isInView ? "opacity-100" : "opacity-0"
+          isInView
+            ? "opacity-100 translate-x-0"
+            : "opacity-0 translate-x-[30px] md:translate-x-0"
         }`}
         onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
       >
         <FontAwesomeIcon icon={faAngleUp} className="text-[#191919] text-2xl" />
-      </div> */}
+      </div>
       <div className="relative">
         <Header />
         <div>

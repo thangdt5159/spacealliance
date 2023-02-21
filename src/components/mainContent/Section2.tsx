@@ -1,12 +1,22 @@
 import Image from "next/image";
 import React, { useEffect, useRef, useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
+import {
+  faAngleLeft,
+  faAngleRight,
+  faBars,
+} from "@fortawesome/free-solid-svg-icons";
 import Slider from "react-slick";
 import { data } from "../Header";
+import Drawer from "../Drawer";
 
 const Section2 = ({ flag }: any) => {
   const sliderRef = useRef<any>(null);
+  const [openDrawer, setOpenDrawer] = useState<boolean>();
+
+  const handleClick = () => {
+    setOpenDrawer(!openDrawer);
+  };
 
   const settings = {
     dots: true,
@@ -20,7 +30,7 @@ const Section2 = ({ flag }: any) => {
   return (
     <section className="section2">
       <div
-        className={`bg-[#1a1a1a] md:w-full h-[100px] fixed top-0 transition-all duration-500 hidden ${
+        className={`bg-[#1a1a1a] w-full h-[100px] fixed top-0 transition-all duration-500 ${
           flag
             ? "translate-y-[0] opacity-100 z-[999]"
             : "-translate-y-[100px] opacity-0 z-[-1]"
@@ -32,7 +42,7 @@ const Section2 = ({ flag }: any) => {
             alt=""
             width={200}
             height={200}
-            className="mx-0 w-auto h-auto pt-2 cursor-pointer"
+            className="mx-0 w-[180px] h-[74px] md:w-auto md:h-auto pt-2 cursor-pointer"
             onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
           />
           <ul className="hidden md:flex justify-between pt-2">
@@ -45,6 +55,12 @@ const Section2 = ({ flag }: any) => {
               </li>
             ))}
           </ul>
+          <div
+            className="mx-0 text-[25px] md:hidden"
+            onClick={() => setOpenDrawer(!openDrawer)}
+          >
+            <FontAwesomeIcon icon={faBars} />
+          </div>
         </div>
       </div>
 
@@ -80,6 +96,7 @@ const Section2 = ({ flag }: any) => {
           onClick={() => sliderRef.current.slickNext()}
         />
       </div>
+      <Drawer isOpen={openDrawer} handleClick={handleClick} />
     </section>
   );
 };

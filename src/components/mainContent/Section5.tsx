@@ -52,8 +52,8 @@ const Section5 = () => {
               <div
                 className={`md:w-1/2 h-full bg-[#00000057] rounded-[10px] md:scale-[1.198] transition-all duration-1000 ${
                   ref1InView
-                    ? "md:translate-x-0 md:opacity-100"
-                    : "md:translate-x-[150px] md:opacity-0"
+                    ? "md:translate-x-0 opacity-100"
+                    : "md:translate-x-[150px] opacity-0"
                 }`}
                 ref={ref1}
               >
@@ -98,8 +98,8 @@ const Section5 = () => {
               <div
                 className={`md:w-1/2 h-full bg-[#00000057] rounded-[10px] md:scale-[1.198] transition-all duration-1000 ${
                   ref2InView
-                    ? "md:translate-x-0 md:opacity-100"
-                    : "md:-translate-x-[150px] md:opacity-0"
+                    ? "md:translate-x-0 opacity-100"
+                    : "md:-translate-x-[150px] opacity-0"
                 }`}
                 ref={ref2}
               >
@@ -145,8 +145,8 @@ const Section5 = () => {
               <div
                 className={`md:w-1/2 h-full bg-[#00000057] rounded-[10px] md:scale-[1.198] transition-all duration-1000 ${
                   ref3InView
-                    ? "md:translate-x-0 md:opacity-100"
-                    : "md:translate-x-[150px] md:opacity-0"
+                    ? "md:translate-x-0 opacity-100"
+                    : "md:translate-x-[150px] opacity-0"
                 }`}
                 ref={ref3}
               >
