@@ -50,10 +50,12 @@ const Header = () => {
       setIsInView(entry.isIntersecting);
     });
 
+    const flagObserverRef = flag.current;
+
     observer.observe(flag.current);
 
     return () => {
-      observer.unobserve(flag.current);
+      observer.unobserve(flagObserverRef);
     };
   }, []);
 

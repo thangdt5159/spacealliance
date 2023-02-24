@@ -50,12 +50,15 @@ const Section4 = () => {
       }
     });
 
+    const titleObserverRef = titleRef.current;
+    const itemObserverRef = itemRef.current;
+
     titleObserver.observe(titleRef.current);
     itemObserver.observe(itemRef.current);
 
     return () => {
-      titleObserver.unobserve(titleRef.current);
-      itemObserver.unobserve(itemRef.current);
+      titleObserver.unobserve(titleObserverRef);
+      itemObserver.unobserve(itemObserverRef);
     };
   }, []);
 

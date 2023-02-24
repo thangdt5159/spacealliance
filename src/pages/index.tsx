@@ -1,4 +1,3 @@
-import { Inter } from "@next/font/google";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleUp } from "@fortawesome/free-solid-svg-icons";
 import Header from "../components/Header";
@@ -8,7 +7,7 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import { useEffect, useRef, useState } from "react";
 
-const inter = Inter({ subsets: ["latin"] });
+// const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   const flag = useRef<any>(null);
@@ -20,9 +19,11 @@ export default function Home() {
       setIsInView(entry.isIntersecting);
     });
 
+    const flag1ObserverRef = flag.current;
+
     flag1Observer.observe(flag.current);
 
-    return () => flag1Observer.unobserve(flag.current);
+    return () => flag1Observer.unobserve(flag1ObserverRef);
   }, []);
 
   return (

@@ -31,14 +31,18 @@ const Section5 = () => {
       }
     });
 
+    const ref1ObserverRef = ref1.current;
+    const ref2ObserverRef = ref2.current;
+    const ref3ObserverRef = ref3.current;
+
     ref1Observer.observe(ref1.current);
     ref2Observer.observe(ref2.current);
     ref3Observer.observe(ref3.current);
 
     return () => {
-      ref1Observer.unobserve(ref1.current);
-      ref2Observer.unobserve(ref2.current);
-      ref3Observer.unobserve(ref3.current);
+      ref1Observer.unobserve(ref1ObserverRef);
+      ref2Observer.unobserve(ref2ObserverRef);
+      ref3Observer.unobserve(ref3ObserverRef);
     };
   }, []);
 
@@ -64,8 +68,8 @@ const Section5 = () => {
                   </span>
                 </h3>
                 <p className="m-[15px] text-[30px] font-bold leading-9">
-                  "Even if I had to steal and destroy things others hold dear,
-                  I'm going to bring joy to you!"
+                  &quot;Even if I had to steal and destroy things others hold
+                  dear, I&apos;m going to bring joy to you!&quot;
                 </p>
                 <Image
                   src="/images/header.png"
@@ -110,8 +114,8 @@ const Section5 = () => {
                   </span>
                 </h3>
                 <p className="m-[15px] text-[30px] font-bold leading-9">
-                  " Yo Adventurer! Let's explore the world of excitements
-                  together!"
+                &quot;Yo Adventurer! Let&apos;s explore the world of excitements
+                  together!&quot;
                 </p>
                 <Image
                   src="/images/header.png"
@@ -157,7 +161,7 @@ const Section5 = () => {
                   </span>
                 </h3>
                 <p className="md:m-[15px] text-[30px] font-bold leading-9">
-                  " Get on your knees adventurer! I am the Queen of the street!"
+                &quot;Get on your knees adventurer! I am the Queen of the street!&quot;
                 </p>
                 <Image
                   src="/images/header.png"
