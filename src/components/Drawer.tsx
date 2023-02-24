@@ -1,7 +1,7 @@
 import React from "react";
 import { data } from "./Header";
 
-const Drawer = ({ isOpen, handleClick }: any) => {
+const Drawer = ({ isOpen, handleClick, closeDrawer }: any) => {
   return (
     <>
       <>
@@ -26,8 +26,8 @@ const Drawer = ({ isOpen, handleClick }: any) => {
           ))}
         </section>
         <div
-          className={`bg-black/60 w-full h-screen z-[9998] fixed top-0 bottom-0 left-0 right-0 transition-all duration-500 ${
-            isOpen ? "opacity-100" : "opacity-0"
+          className={`bg-black/60 w-full h-screen fixed top-0 bottom-0 left-0 right-0 transition-all duration-500 md:hidden ${
+            isOpen ? "opacity-100 z-[9998]" : "opacity-0 z-[-1]"
           }`}
           onClick={handleClick}
         ></div>
