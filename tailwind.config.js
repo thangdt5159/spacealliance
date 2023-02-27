@@ -18,7 +18,7 @@ module.exports = {
         headerBg: "url('/images/veses-title.jpg')",
         section4Bg: "url('/images/poster-anna-bg.png')",
         section4CharBg: "url('/images/poster-anna-char.png')",
-        section5Bg11: "url('/images/loli-banner-bg.jpg')",
+        section5Bg11: "url('/images/loli-banner-BG.jpg')",
         section5Bg12: "url('/images/loli-banner-loli.png')",
         section5Bg21: "url('/images/gameboi-banner-bg.jpg')",
         section5Bg22: "url('/images/gameboi-banner.png')",
